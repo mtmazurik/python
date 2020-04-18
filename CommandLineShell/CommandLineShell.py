@@ -12,9 +12,9 @@ def main():
             break
         elif convertType == ('T'):
             proc = subprocess.Popen("ls -l", shell=isinstance("ls -l", str),
-                                stdin = PIPE,
-                                stdout = PIPE,
-                                stderr = STDOUT,
+                                stdin = subprocess.PIPE,
+                                stdout = subprocess.PIPE,
+                                stderr = subprocess.STDOUT,
                                 close_fds = True)
             print('\tsubprocess output: ' + str(stdout_value))
         else:
