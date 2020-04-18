@@ -9,9 +9,14 @@ def main():
         if convertType == ('E'):
             break
         elif convertType == ('T'):
-            proc = subprocess.Popen(['echo', '"to stdoout"'],
-                                stdout = subprocess.PIPE,)
-            stdout_value = proc.communicate()[0]
+            proc = subprocess.Popen('cat -; echo "to stderr" 1>&2',
+                                shell=True,
+                                stdin = subprocess.PIPE,
+                                stdout = subprocess.PIPE,
+                                stderr = subprocess.PIPE)
+            stdout_value, stderr_value = proc.communicate('through stdin to stdout')
+            print '\tpass through:', repr(stdout_value)
+            print '\tstderr      :', repr(stderr_value)
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
