@@ -4,15 +4,15 @@ import sys
 import logging
 
 def main(): 
+    print('type: e(xit) to leave')
     while True:  
-        print('type: e(xit) to leave')
         userInput = input('rsh> ')
         userInput = userInput.lower()
         commandType = userInput[0]
         if commandType == ('e'):
             break
         elif commandType == ('t'):
-            out, err = subprocess.Popen(userInput, shell=isinstance(userInput, str),
+            out, err = subprocess.Popen(userInput, shell=True,
                                 stdin = subprocess.PIPE,
                                 stdout = subprocess.PIPE,
                                 stderr = subprocess.STDOUT,
