@@ -31,7 +31,7 @@ def main():
         cmd, convType, tempValue = parseInput(userInput) # separate the command line
 
         if cmd == ('e'):    # (e)xit
-            break
+            raise KeyboardInterrupt
         elif cmd == ('t'):  # (t)empcalc
             subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
             outputMessage = subprocess.check_output(subprocess_cmd_args_list)       # returns byte type
