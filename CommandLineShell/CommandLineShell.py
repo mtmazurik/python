@@ -27,7 +27,7 @@ def main():
         if cmd == ('e'):    # (e)xit
             break
         elif cmd == ('t'):  # (t)empcalc
-            cmd_list = ['/home/mtmazurik/python/CommandLineShell/Celcius_to_Fahrenheit_Calculator.py', convType, tempValue ]
+            cmd_list = ['/home/mtmazurik/python/CommandLineShell/Celcius_To_Fahrenheit_Calculator.py', convType, tempValue ]
 
             p = subprocess.Popen(cmd_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
             stdout = p.stdout.read()
