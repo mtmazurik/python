@@ -41,11 +41,13 @@ def main():
 if __name__ == '__main__': 
     try:
         main()
+    except AttributeError as exc:
+        print(str(exc))
+    except NameError as exc:
+        print(str(exc))
     except KeyboardInterrupt:
         print('\nok. rsh says bye!\n')
         exit()
-    except NameError as exc:
-        print(str(exc))
     except:
         print('Exception encountered.' + str(sys.exc_info()[0])) # this will tell what type of exception
         exit()
