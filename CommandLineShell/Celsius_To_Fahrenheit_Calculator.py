@@ -14,8 +14,6 @@ def getNumericTemperature(promptString):
             
 def main(): 
     if len(sys.argv) > 1:                           # we are being called by command line with arguments (note: will be lowercase convertType)
-        print(sys.argv) # debug
-        exit()
         convType = argv[1]
         tempVal = float(argv[2])
         if convType == ('c'):
