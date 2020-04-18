@@ -11,7 +11,7 @@ def main():
         if convertType == ('E'):
             break
         elif convertType == ('T'):
-            proc = subprocess.Popen("ls -l", shell=isinstance("ls -l", basestring),
+            proc = subprocess.Popen("ls -l", shell=isinstance("ls -l", str),
                                 stdin = PIPE,
                                 stdout = PIPE,
                                 stderr = STDOUT,
