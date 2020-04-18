@@ -33,8 +33,8 @@ def main():
             break
         elif cmd == ('t'):  # (t)empcalc
             subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
-            outputMessage = subprocess.check_output(subprocess_cmd_args_list)
-            print(outputMessage)             
+            outputMessage = subprocess.check_output(subprocess_cmd_args_list)       # returns byte type
+            print(str(outputMessage))                                               # convert to string type
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
