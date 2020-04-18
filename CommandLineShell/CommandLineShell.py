@@ -7,11 +7,11 @@ def main():
     while True:  
         userInput = input('rsh> ')
         userInput = userInput.upper()
-        convertType = userInput[0]
-        if convertType == ('E'):
+        commandType = userInput[0]
+        if commandType == ('E'):
             break
-        elif convertType == ('T'):
-            out, err = subprocess.Popen("ls -l", shell=isinstance("ls -l", str),
+        elif commandType == ('T'):
+            out, err = subprocess.Popen(userInput, shell=isinstance(userInput, str),
                                 stdin = subprocess.PIPE,
                                 stdout = subprocess.PIPE,
                                 stderr = subprocess.STDOUT,
