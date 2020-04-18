@@ -33,7 +33,7 @@ def main():
             break
         elif cmd == ('t'):  # (t)empcalc
             subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
-            p = subprocess.call(subprocess_cmd_args_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+            p = subprocess.call(subprocess_cmd_args_list, stdinput = subprocess.PIPE, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
             stdout = p.stdout.read()           
             print(stdout)
         else:
