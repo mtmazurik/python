@@ -15,7 +15,7 @@ def main():
                                 stdout = subprocess.PIPE,
                                 )
             stdout_value = proc.communicate('through stdin to stdout')
-            print('\tpass through:', repr(stdout_value))
+            print('\tpass through:' + str(stdout_value))
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
