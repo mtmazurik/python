@@ -4,13 +4,13 @@ import sys
 import logging
 
 def parseInput(inputString):
-    inputString = inputString.lower()   #lower case it all
-    inputs = split(inputString)         # break line by white space into inputs[] array
+    inputString = inputString.lower()       #lower case it all
+    inputs = inputString.split(inputString) # break line by white space into inputs[] array
 
-    cmdstring = inputs[0]               # grab the first chars:   (t)empcalc command
-    cmd = cmdstring[0]                  # pluck of the first char
+    cmdstring = inputs[0]                   # grab the first chars:   (t)empcalc command
+    cmd = cmdstring[0]                      # pluck of the first char
 
-    conversionType = cmdstring[1]       # grab the 2nd chars
+    conversionType = cmdstring[1]           # grab the 2nd chars
     temperatureValue = float(cmdstring[2])  # grab the 3rd chars and convert to float
 
     cmd, converstionType, temperatureValue = parseInput()  # return 3 values from a function
