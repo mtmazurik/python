@@ -11,7 +11,7 @@ def parseInput(inputString):
     cmd = cmdstring[0]                      # pluck of the first char
 
     conversionType = inputsArray[1]         # grab the 2nd chars
-    temperatureValue = float(inputsArray[2])  # grab the 3rd chars and convert to float
+    temperatureValue = inputsArray[2]       # grab the 3rd chars 
 
     return cmd, conversionType, temperatureValue  # return 3 values from a function
 
