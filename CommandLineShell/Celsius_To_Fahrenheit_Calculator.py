@@ -17,11 +17,11 @@ def main():
         convType = argv[1]
         tempVal = float(argv[2])
         if convType == ('c'):
-            print(str(round(CtoF(tempVal))) + ' F')
+            print(str(round(CtoF(tempVal), 1)) + ' F')
         elif convType == ('f'):
-            print(str(round(FtoC(tempVal))) + ' C')
+            print(str(round(FtoC(tempVal), 1)) + ' C')
         elif confType == ('k'):
-            print(str(round(KtoF(tempVal))) + 'F')
+            print(str(round(KtoF(tempVal), 1)) + 'F')
         else:
             print('invalid input; example usage:  tempcalc f 212')
     else:
