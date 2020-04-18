@@ -16,6 +16,7 @@ def main():
     if len(sys.argv) > 1:                           # we are being called by command line with arguments (note: will be lowercase convertType)
         convType = argv[1]
         tempVal = float(argv[2])
+        print(f'convType:{convType}, tempVal:{tempVal}') # debug stmt
         if convType == ('c'):
             print(str(round(CtoF(tempVal), 1)) + ' F')
         elif convType == ('f'):
