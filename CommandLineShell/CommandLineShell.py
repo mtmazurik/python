@@ -25,5 +25,5 @@ if __name__ == '__main__':
         print('\nok. bye!\n')
         exit()
     except:
-        print('Exception encountered. Restart program and try again.')
+        print('Exception encountered.' + sys.exc_info()[0])
         exit()
