@@ -46,7 +46,7 @@ if __name__ == '__main__':
     except NameError as exc:
         print(str(exc))
     except KeyboardInterrupt:
-        print('\nok. rsh says bye!\n')
+        print('\nok. RayShell (rsh) says bye!\n')
         exit()
     except:
         print('Exception encountered.' + str(sys.exc_info()[0])) # this will tell what type of exception
