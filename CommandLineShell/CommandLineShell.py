@@ -9,13 +9,12 @@ def main():
         if convertType == ('E'):
             break
         elif convertType == ('T'):
-            proc = subprocess.Popen(['cat','-'],
-                                shell=True,
-                                stdin = subprocess.PIPE,
-                                stdout = subprocess.PIPE,
-                                )
-            stdout_value = proc.communicate('through stdin to stdout')
-            print('\tpass through:' + str(stdout_value))
+            proc = subprocess.Popen("ls -l", shell=isinstance("ls -l", basestring),
+                                stdin = PIPE,
+                                stdout = PIPE,
+                                stderr = STDOUT,
+                                close_fds = True)
+            print('\tsubprocess output: ' + str(stdout_value))
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
