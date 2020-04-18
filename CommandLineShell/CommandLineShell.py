@@ -7,7 +7,7 @@ def main():
     print('type: e(xit) to leave')
     while True:  
         userInput = input('rsh> ')
-        if userInput == "" continue
+        if userInput == '' : continue
         userInput = userInput.lower()
         commandType = userInput[0]
         if commandType == ('e'):
