@@ -20,7 +20,7 @@ def parseInput(inputString):
     return cmd, conversionType, temperatureValue  # return 3 values from a function
 
 def main(): 
-    pythonCommand = 'python3 /home/mtmazurik/python/CommandLineShell/Celsius_To_Fahrenheit_Calculator.py'
+    tempCalcProgram = '/home/mtmazurik/python/CommandLineShell/Celsius_To_Fahrenheit_Calculator.py'
     print('type: e(xit) to leave')
     while True:  
 
@@ -32,11 +32,9 @@ def main():
         if cmd == ('e'):    # (e)xit
             break
         elif cmd == ('t'):  # (t)empcalc
-            cmd_list = [pythonCommand, convType, tempValue ]
-
-            p = subprocess.call(cmd_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
-            stdout = p.stdout.read()
-            
+            subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
+            p = subprocess.call(subprocess_cmd_args_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+            stdout = p.stdout.read()           
             print(stdout)
         else:
             print('Command not recognized. Re-enter a valid command.')
