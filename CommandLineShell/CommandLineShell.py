@@ -6,7 +6,7 @@ import logging
 def parseInput(inputString):
     inputString = inputString.lower()       #lower case it all
     inputArray = inputString.split()        # break line by white space into inputs[] array
-    print(inputsArray) #debug
+
     cmdstring = inputArray[0]               # grab the first chars:   (t)empcalc command
     cmd = cmdstring[0]                      # pluck of the first char
 
