@@ -33,7 +33,8 @@ def main():
             break
         elif cmd == ('t'):  # (t)empcalc
             subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
-            p = subprocess.run(subprocess_cmd_args_list, stdin = subprocess.PIPE, stdout = subprocess.PIPE, stderr = subprocess.PIPE)     
+            p = subprocess.call(subprocess_cmd_args_list, stdin = subprocess.PIPE, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+            stdout = p.stdout.read()
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
@@ -41,7 +42,7 @@ if __name__ == '__main__':
     try:
         main()
     except KeyboardInterrupt:
-        print('\nok. bye!\n')
+        print('\nok. rsh says bye!\n')
         exit()
     except NameError as exc:
         print(str(exc))
