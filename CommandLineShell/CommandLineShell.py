@@ -13,7 +13,7 @@ def parseInput(inputString):
     conversionType = inputsArray[1]         # grab the 2nd chars
     temperatureValue = float(inputsArray[2])  # grab the 3rd chars and convert to float
 
-    return cmd, converstionType, temperatureValue  # return 3 values from a function
+    return cmd, conversionType, temperatureValue  # return 3 values from a function
 
 def main(): 
     print('type: e(xit) to leave')
