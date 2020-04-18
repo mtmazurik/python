@@ -21,7 +21,7 @@ def main():
 
         userInput = input('rsh> ')
 
-        if userInput == '' : continue                    # handle no input case
+        if userInput == '' : continue                    # handle no input  case
         cmd, convType, tempValue = parseInput(userInput) # separate the command line
 
         if cmd == ('e'):    # (e)xit
