@@ -13,10 +13,11 @@ def main():
                                 shell=True,
                                 stdin = subprocess.PIPE,
                                 stdout = subprocess.PIPE,
-                                stderr = subprocess.PIPE)
+                                stderr = subprocess.PIPE,
+                                )
             stdout_value, stderr_value = proc.communicate('through stdin to stdout')
-            print '\tpass through:', repr(stdout_value)
-            print '\tstderr      :', repr(stderr_value)
+            print('\tpass through:', repr(stdout_value))
+            print('\tstderr      :', repr(stderr_value))
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
