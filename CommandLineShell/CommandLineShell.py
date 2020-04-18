@@ -28,5 +28,5 @@ if __name__ == '__main__':
     except NameError as error
         print(str(error))
     except:
-        print('Exception encountered.' + str(sys.exc_info()[0]))
+        print('Exception encountered.' + str(sys.exc_info()[0])) # this will tell what type of exception
         exit()
