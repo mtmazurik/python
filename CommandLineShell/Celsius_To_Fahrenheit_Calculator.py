@@ -18,9 +18,9 @@ def main():
         convType = argv[1]
         tempVal = float(argv[2])
         if convType == ('c'):
-            print(str(round(CtoF(tempVal)) + ' F')
+            print(str(round(CtoF(tempVal))) + ' F')
         elif convType == ('f'):
-            print(str(round(FtoC(tempVal)) + ' C')
+            print(str(round(FtoC(tempVal))) + ' C')
         elif confType == ('k'):
             print(str(round(KtoF(tempVal))) + 'F')
         else:
