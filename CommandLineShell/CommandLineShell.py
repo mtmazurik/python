@@ -35,7 +35,9 @@ def main():
             subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
             p = subprocess.Popen(subprocess_cmd_args_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
             outputMessage = p.stdout.read()
+            outputError = p.stdout.read()
             print(outputMessage)
+            print(outputError)
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
