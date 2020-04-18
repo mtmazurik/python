@@ -25,7 +25,7 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print('\nok. bye!\n')
         exit()
-    except NameError as error
+    except NameError as error:
         print(str(error))
     except:
         print('Exception encountered.' + str(sys.exc_info()[0])) # this will tell what type of exception
