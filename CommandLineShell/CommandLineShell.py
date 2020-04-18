@@ -16,7 +16,7 @@ def main():
                                 stdout = subprocess.PIPE,
                                 stderr = subprocess.STDOUT,
                                 close_fds = True)
-            print('\tsubprocess output: ' + str(stdout_value))
+            print('\tsubprocess output: ' + str(stdout))
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
