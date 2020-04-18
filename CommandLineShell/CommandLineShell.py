@@ -33,11 +33,9 @@ def main():
             break
         elif cmd == ('t'):  # (t)empcalc
             subprocess_cmd_args_list = ['python3', tempCalcProgram, convType, tempValue ]
-            p = subprocess.Popen(subprocess_cmd_args_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
-            outputMessage = p.stdout.read()
-            outputError = p.stdout.read()
-            print(outputMessage)
-            print(outputError)
+            p = subprocess.Popen(subprocess_cmd_args_list, stdout = subprocess.PIPE)
+            outputMessage = p.communicate()[0]
+            print 'STDOUT:{}'.format(outputMessage)
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
