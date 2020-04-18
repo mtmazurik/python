@@ -13,12 +13,11 @@ def main():
         if commandType == ('e'):
             break
         elif commandType == ('t'):
-            out, err = subprocess.Popen(userInput, shell=True,
-                                stdin = subprocess.PIPE,
-                                stdout = subprocess.PIPE,
-                                stderr = subprocess.STDOUT,
-                                close_fds = True).communicate()
-            print('\tsubprocess output: ' + str(out))
+            cmd_list = ['./Celcius_to_Fahrenheit_Calculator.py', sys.argv[1], sys.argv[2] ]
+            p = subprocess.Popen(cmd_list, stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+            stdout = p.stdout.read()
+            stderr = p.stderr.read()
+            print(stdout)
         else:
             print('Command not recognized. Re-enter a valid command.')
                           
