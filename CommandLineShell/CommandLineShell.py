@@ -3,7 +3,7 @@ import subprocess
 import sys
 import logging
 
-def parseInput(inputString)
+def parseInput(inputString):
     inputString = inputString.lower()   #lower case it all
     inputs = split(inputString)         # break line by white space into inputs[] array
 
