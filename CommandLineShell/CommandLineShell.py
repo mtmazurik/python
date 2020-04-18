@@ -13,9 +13,10 @@ def parseInput(inputString):
     conversionType = None
     temperatureValue = None
     if len(inputArray) > 1 :
-        conversionType = inputArray[1]         # grab the 2nd chars
+        conversionTypeString = inputArray[1]   # grab the 2nd string
+        conversionType = converstionTypeString[0] # and the 1st char
     if len(inputArray) > 2 :
-        temperatureValue = inputArray[2]       # grab the 3rd chars 
+        temperatureValue = inputArray[2]       # grab the 3rd string 
 
     return cmd, conversionType, temperatureValue  # return 3 values from a function
 
