@@ -10,7 +10,7 @@ def parseInput(inputString):
     cmdstring = inputArray[0]               # grab the first chars:   (t)empcalc command
     cmd = cmdstring[0]                      # pluck of the first char
 
-    conversiontType = None
+    conversionType = None
     temperatureValue = None
     if len(inputArray) > 1 :
         conversionType = inputArray[1]         # grab the 2nd chars
