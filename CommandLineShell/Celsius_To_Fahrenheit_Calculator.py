@@ -21,7 +21,7 @@ def main():
             print(str(round(CtoF(tempVal), 1)) + ' F')
         elif convType == ('f'):
             print(str(round(FtoC(tempVal), 1)) + ' C')
-        elif confType == ('k'):
+        elif convType == ('k'):
             print(str(round(KtoF(tempVal), 1)) + 'F')
         else:
             print('invalid input; example usage:  tempcalc f 212')
