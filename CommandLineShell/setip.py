@@ -15,10 +15,10 @@ def main():
     netInterface = 'eth0'        
     ipargs = ['sudo', 'ifconfig', netInterface, ip_address, "netmask", mask ]
     raw1 = subprocess.check_output(ipargs)       # returns byte type
-    outputMessage1 = raw1.decode('utf-8').rstrip()) 
+    outputMessage1 = raw1.decode('utf-8').rstrip() 
     routeargs = ['sudo', 'route', 'add', 'default', "gw", gateway, netInterface ]
     raw2 = subprocess.check_output()
-    outputMessage2 = raw2.decode('utf-8').rstrip()) 
+    outputMessage2 = raw2.decode('utf-8').rstrip() 
     outputMessage = outputMessage1 + '/n' + outputMessage2
     print(outputMessage)
                           
