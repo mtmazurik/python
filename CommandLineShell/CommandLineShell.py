@@ -21,7 +21,7 @@ def parseInput(inputString):
     return cmd, conversionType, temperatureValue  # return 3 values from a function
 
 def main(): 
-    tempCalcProgram = '/home/mtmazurik/python/CommandLineShell/Celsius_To_Fahrenheit_Calculator.py'
+    tempCalcProgram = './Celsius_To_Fahrenheit_Calculator.py'
     print('type: e(xit) to leave')
     while True:  
 
