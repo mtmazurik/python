@@ -6,10 +6,11 @@ import subprocess
 # usage  rsh> disks
 #                      invokes df -h command
 def main(): 
-    if len(sys.argv) != 2:                          
+    if len(sys.argv) != 1:                          
         print('invalid command.   Example usage:   rsh> disks')
-    print(sys.argv)
-    # linux command 2
+        exit()
+
+    # linux 
     df_args = ['df', '-h' ]
     raw2 = subprocess.check_output(df_args)
     output = raw2.decode('utf-8')
